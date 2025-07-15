@@ -72,7 +72,7 @@ const parcelNotificationMap = {
         title: "Parcel Delivered",
         message: "The parcel #[parcel_id] has been delivered and the delivery person has exited.",
         data: {
-            screen: "ParcelDetailsPage",
+            screen: "My Parcels",
             params: JSON.stringify({ "ScreenTab": "Delivered Parcels", parcel_id: "123" }),
         },
         categoryId: "",
@@ -88,7 +88,7 @@ const parcelNotificationMap = {
         title: "Leave at Gate Confirmed",
         message: "User of [flat_no] [block_name] requested the parcel be left at the gate. Please store it safely.",
         data: {
-            screen: "ParcelSecurityActionPage",
+            screen: "My Parcels",
             params: JSON.stringify({ ScreenTab: "Incoming Parcels", parcel_id: "123" }),
         },
         categoryId: "Parcelstore",
@@ -101,7 +101,7 @@ const parcelNotificationMap = {
         title: "Parcel Stored at Security",
         message: "The parcel #[parcel_id] has been stored at the security desk.",
         data: {
-            screen: "ParcelDetailsPage",
+            screen: "My Parcels",
             params: JSON.stringify({ ScreenTab: "Incoming Parcels", parcel_id: "123" }),
         },
         categoryId: "ParcelStatusUpdates",
@@ -114,7 +114,7 @@ const parcelNotificationMap = {
         title: "Parcel Handed Over",
         message: "The parcel #[parcel_id] has been handed over to the user.",
         data: {
-            screen: "ParcelDetailsPage",
+            screen: "My Parcels",
             params: JSON.stringify({ "ScreenTab": "Delivered Parcels", parcel_id: "123" }),
         },
         categoryId: "ParcelStatusUpdates",
@@ -129,7 +129,7 @@ const parcelNotificationMap = {
         title: "Parcel Denied by Resident",
         message: "User of [flat_no] [block_name] denied the parcel #[parcel_id]. Please return it to the delivery person.",
         data: {
-            screen: "ParcelSecurityActionPage",
+            screen: "My Parcels",
             params: JSON.stringify({ parcel_id: "123" }),
         },
         categoryId: "ParcelDenied",
@@ -142,7 +142,7 @@ const parcelNotificationMap = {
         title: "Parcel Returned to Delivery Person",
         message: "The parcel #[parcel_id] has been returned after user rejection.",
         data: {
-            screen: "ParcelDetailsPage",
+            screen: "My Parcels",
             params: JSON.stringify({ "ScreenTab": "Delivered Parcels", parcel_id: "123" }),
         },
         categoryId: "ParcelStatusUpdates",
