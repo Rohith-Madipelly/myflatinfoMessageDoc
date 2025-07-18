@@ -50,6 +50,7 @@ const parcelNotificationMap = {
         categoryId: "GatePassDiscrepancy",
         channelId: "GatePass",
         sound: "bellnotificationsound.wav",
+        //
     },
     GATEPASS_APPROVED_EXTRA_ITEM: {
         // user >> security
