@@ -42,12 +42,13 @@ const parcelNotificationMap = {
         // security >> user
         // status: Rejected (due to discrepancy)
         title: "Gate Pass Discrepancy Found",
-        message: "Security has found a mismatch in your gate pass #[gate_pass_id]. Please review and respond.",
+        message: "Security has found a mismatch in your gate pass #[gate_pass_id]. Do you want to approve the mismatch. Please review and respond.",
         data: {
             screen: "VisitorsViewGatePass",
             params: JSON.stringify({ screenTab: "Discrepancy", gate_pass_id: "1", visitor_id: "73" }),
         },
         categoryId: "GatePassDiscrepancy",
+            categoryId: "GatePassDiscrepancyAction",
         channelId: "GatePass",
         sound: "bellnotificationsound.wav",
         //
@@ -136,18 +137,3 @@ module.exports = {
 
 const AnalogueLogo = 'https://www.analogueitsolutions.com/assets/analogueitsolution_logo-BVdZYf9n.png';
 
-
-
-
-// Workflow	Status	Tab	Suggested Label
-// Allow	OnGoing	Incoming Parcels	"Waiting for your action"
-// Allow	Incoming Parcels	"Allowed, pending check-in"
-// CheckIn	Incoming Parcels	"Checked in, at reception"
-// DeliveredReturned	Completed	"Delivered / Returned"
-// LeaveAtGate	OnGoing	Incoming Parcels	"Waiting for your action"
-// LeaveAtGate	Incoming Parcels	"Leave at gate selected"
-// StoredInSecurity	Incoming Parcels	"Stored with security"
-// GivenToUser	Completed	"Picked up"
-// Deny	OnGoing	Incoming Parcels	"Waiting for your action"
-// Deny	Incoming Parcels	"Denied, returning"
-// ReturnedRejected	Completed	"Returned to sender"
