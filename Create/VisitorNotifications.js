@@ -13,7 +13,7 @@ const VisitorNotificationsMap = {
       params: JSON.stringify({
         screenTab: "Planned Visitors",
         visitor_id: "73",
-        building_id: "1"
+        building_id: "1",
       }),
     },
     categoryId: "PlannedVisitors",
@@ -30,7 +30,11 @@ const VisitorNotificationsMap = {
       "Planned visitor #[visitor_name] has checked out from the premises.",
     data: {
       screen: "Visitors",
-      params: JSON.stringify({ screenTab: "Completed", visitor_id: "73", building_id: "1" }),
+      params: JSON.stringify({
+        screenTab: "Completed",
+        visitor_id: "73",
+        building_id: "1",
+      }),
     },
     categoryId: "PlannedVisitors",
     // channelId: "security",
@@ -46,9 +50,12 @@ const VisitorNotificationsMap = {
       "Security has raised an unplanned visitor request. Please respond with an action.",
     data: {
       screen: "Visitors",
-      params: JSON.stringify({ "screenTab": "Unplanned Visitors", "visitor_id": 15, "building_id": "1" }),
+      params: JSON.stringify({
+        screenTab: "Unplanned Visitors",
+        visitor_id: 15,
+        building_id: "1",
+      }),
     },
-
 
     categoryId: "UnplannedVisitorsAction",
     channelId: "security",
@@ -65,9 +72,12 @@ const VisitorNotificationsMap = {
       "You haven't responded to the previous visitor request from security. We're resending the notification — please review and take action.",
     data: {
       screen: "Visitors",
-      params: JSON.stringify({ "screenTab": "Unplanned Visitors", "visitor_id": 15, "building_id": "1" }),
+      params: JSON.stringify({
+        screenTab: "Unplanned Visitors",
+        visitor_id: 15,
+        building_id: "1",
+      }),
     },
-
 
     categoryId: "UnplannedVisitorsAction",
     channelId: "security",
@@ -75,7 +85,7 @@ const VisitorNotificationsMap = {
     actionButtons: ["Allow", "Deny", "Stay at Lobby"],
   },
 
-    // ✅ UNPLANNED VISITOR CHECK-IN (AllowIn)
+  // ✅ UNPLANNED VISITOR CHECK-IN (AllowIn)
   UNPLANNED_VISITOR_ALLOW_IN: {
     // security >> user
     // status: "AllowIn",
@@ -86,13 +96,13 @@ const VisitorNotificationsMap = {
       params: JSON.stringify({
         screenTab: "Planned Visitors",
         visitor_id: "73",
-        building_id: "1"
+        building_id: "1",
       }),
     },
     categoryId: "PlannedVisitors",
     channelId: "security",
     sound: "bellnotificationsound.wav",
-  }, 
+  },
   // 🟢 USER RESPONDED TO UNPLANNED VISITOR (AllowIn / Deny / Stay at Lobby)
   UNPLANNED_VISITOR_USER_RESPONDED: {
     // user >> security
@@ -117,7 +127,11 @@ const VisitorNotificationsMap = {
       "Unplanned visitor #[visitor_id] has checked out from the premises.",
     data: {
       screen: "Visitors",
-      params: JSON.stringify({ screenTab: "Completed", visitor_id: "73", building_id: "1" }),
+      params: JSON.stringify({
+        screenTab: "Completed",
+        visitor_id: "73",
+        building_id: "1",
+      }),
     },
     categoryId: "UnplannedVisitor",
     // channelId: "security",
