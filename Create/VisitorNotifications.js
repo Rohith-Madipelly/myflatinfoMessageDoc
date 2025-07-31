@@ -13,6 +13,7 @@ const VisitorNotificationsMap = {
       params: JSON.stringify({
         screenTab: "Planned Visitors",
         visitor_id: "73",
+        building_id: "1"
       }),
     },
     categoryId: "PlannedVisitors",
@@ -29,7 +30,7 @@ const VisitorNotificationsMap = {
       "Planned visitor #[visitor_name] has checked out from the premises.",
     data: {
       screen: "Visitors",
-      params: JSON.stringify({ screenTab: "Completed", visitor_id: "73" }),
+      params: JSON.stringify({ screenTab: "Completed", visitor_id: "73", building_id: "1" }),
     },
     categoryId: "PlannedVisitors",
     channelId: "security",
@@ -48,6 +49,7 @@ const VisitorNotificationsMap = {
       params: JSON.stringify({
         screenTab: "Unplanned Visitors",
         visitor_id: "73",
+        building_id: "1"
       }),
     },
     categoryId: "UnplannedVisitors",
@@ -64,7 +66,7 @@ const VisitorNotificationsMap = {
     message: "User has responded with '[action]' for visitor #[visitor_name].",
     data: {
       screen: "VisitorEntryDetails",
-      params: JSON.stringify({ visitor_id: "73" }),
+      params: JSON.stringify({ visitor_id: "3", building_id: "1" }),
     },
     categoryId: "UnplannedVisitors",
     channelId: "security",
@@ -80,7 +82,7 @@ const VisitorNotificationsMap = {
       "Unplanned visitor #[visitor_id] has checked out from the premises.",
     data: {
       screen: "Visitors",
-      params: JSON.stringify({ screenTab: "Completed", visitor_id: "73" }),
+      params: JSON.stringify({ screenTab: "Completed", visitor_id: "73", building_id: "1" }),
     },
     categoryId: "UnplannedVisitors",
     channelId: "security",

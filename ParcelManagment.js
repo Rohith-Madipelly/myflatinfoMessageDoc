@@ -33,7 +33,7 @@ const parcelNotificationMap = {
     },
     categoryId: "ParcelRespose",
     channelId: "Parcel",
-    sound: "bellnotificationsound.wav",
+        sound: 'apartmentbuzzersound.wav',
   },
 
   PARCEL_ALLOWED: {

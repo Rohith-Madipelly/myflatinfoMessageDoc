@@ -11,7 +11,7 @@ const HomeNotificationsMap = {
         message: "A new banner has been posted. Tap to view the latest updates from the admin.",
         data: {
             screen: "Home",
-            // params: JSON.stringify({ "ScreenTab": "Delivered Parcels", parcel_id: "123" }),
+            params: JSON.stringify({ building_id:"1"}),
         },
         categoryId: "AdminUpdates",
         channelId: "Admin",
@@ -24,7 +24,7 @@ const HomeNotificationsMap = {
         message: "A new notice has been added to your building's notice board. Tap to view the details.",
         data: {
             screen: "Timeline",
-            params: JSON.stringify({ "ScreenTab": "Notice Board", "noticeboardId": 1 }),
+            params: JSON.stringify({ "ScreenTab": "Notice Board", "noticeboardId": 1,building_id:"1" }),
         },
         categoryId: "NoticeBoard",
         channelId: "Community",
@@ -36,7 +36,7 @@ const HomeNotificationsMap = {
         message: "A previously posted notice has been updated. Check the latest version now.",
         data: {
             screen: "Timeline",
-            params: JSON.stringify({ "ScreenTab": "Notice Board", "noticeboardId": 1 }),
+            params: JSON.stringify({ "ScreenTab": "Notice Board", "noticeboardId": 1,"building_id":"1" }),
         },
 
         categoryId: "NoticeBoard",
@@ -51,7 +51,7 @@ const HomeNotificationsMap = {
         message: "A new event has been posted. Check it out and RSVP today!",
         data: {
             screen: "Timeline",
-            params: JSON.stringify({ "ScreenTab": "Events", "event_id": 1 }),
+            params: JSON.stringify({ "ScreenTab": "Events", "event_id": 1,"building_id":"1" }),
         },
         categoryId: "Events",
         channelId: "Community",
@@ -62,7 +62,7 @@ const HomeNotificationsMap = {
         message: "An upcoming event has been updated. Tap to view the latest information.",
         data: {
             screen: "Timeline",
-            params: JSON.stringify({ "ScreenTab": "Events", "event_id": 1 }),
+            params: JSON.stringify({ "ScreenTab": "Events", "event_id": 1 ,"building_id":"1"}),
         },
         categoryId: "Events",
         channelId: "Community",
@@ -75,7 +75,7 @@ const HomeNotificationsMap = {
         message: "Now you can post classifieds visible to your flat or the entire building. It's quick, easy, and reaches everyone in seconds!",
         data: {
             screen: "Classifieds",
-            params: JSON.stringify({ "classified_id": 1 }),
+            params: JSON.stringify({ "classified_id": 1,"building_id":"1" }),
         },
         categoryId: "Classifieds",
         channelId: "Community",
@@ -88,7 +88,7 @@ const HomeNotificationsMap = {
         message: "Your classified has been approved by the admin and is now visible to selected members. 🚀",
         data: {
             screen: "Classifieds",
-            params: JSON.stringify({ "classified_id": 1, "ScreenTab": "MyPosts", }),
+            params: JSON.stringify({ "classified_id": 1, "ScreenTab": "Post Status", }),
         },
         categoryId: "Classifieds",
         channelId: "Community",
@@ -101,7 +101,7 @@ const HomeNotificationsMap = {
         message: "An admin is reviewing your classified. You'll be notified once it's approved or needs changes. 🔍",
         data: {
             screen: "Classifieds",
-            params: JSON.stringify({ "classified_id": 1, "ScreenTab": "MyPosts", }),
+            params: JSON.stringify({ "classified_id": 1,"ScreenTab": "Post Status", }),
         },
         categoryId: "Classifieds",
         channelId: "Community",
@@ -114,7 +114,7 @@ const HomeNotificationsMap = {
         message: "Unfortunately, your classified was not approved. Please review and edit your post before resubmitting. ✏️",
         data: {
             screen: "Classifieds",
-            params: JSON.stringify({ "classified_id": 1, "ScreenTab": "MyPosts", }),
+            params: JSON.stringify({ "classified_id": 1, "ScreenTab": "Post Status",}),
         },
         categoryId: "Classifieds",
         channelId: "Community",
