@@ -85,6 +85,27 @@ const VisitorNotificationsMap = {
     actionButtons: ["Allow", "Deny", "Stay at Lobby"],
   },
 
+  // 🔶 MISSING_ALERT UNPLANNED/PLANNED VISITOR RAISED BY SECURITY (the visitor is missing confirmation)
+  MISSING_ALERT_UNPLANNED_PLANNED_VISITOR_ACTION_REQUIRED: {
+    // security >> user
+    //  status: "Living",
+    title: "Missing Alert: Visitor Not Found",
+    message:
+      "Security could not locate the visitor at your flat. Please confirm their status or take action regarding their visit.",
+    data: {
+      screen: "Visitors",
+      params: JSON.stringify({
+        screenTab: "Unplanned Visitors", //UNPLANNED/PLANNED
+        visitor_id: 15,
+        building_id: "1",
+      }),
+    },
+    categoryId: "UnplannedVisitorsAction",
+    channelId: "security",
+    sound: "bellnotificationsound.wav",
+    actionButtons: ["Allow", "Deny", "Stay at Lobby"],
+  },
+
   // ✅ UNPLANNED VISITOR CHECK-IN (AllowIn)
   UNPLANNED_VISITOR_ALLOW_IN: {
     // security >> user
@@ -138,24 +159,21 @@ const VisitorNotificationsMap = {
     // sound: "bellnotificationsound.wav",
   },
 
-
-
   NO_RESPONDED_UNPLANNED_VISITOR_CLOSE: {
-  // Triggered when the resident doesn't respond
-  title: "Unplanned Visitor entry cancelled",
-  message:
-    "You did not respond in time. Unplanned visitor #73 has been checked out by security.",
-  data: {
-    screen: "Visitors",
-    params: JSON.stringify({
-      screenTab: "Completed",
-      visitor_id: "73",
-      building_id: "1"
-    }),
+    // Triggered when the resident doesn't respond
+    title: "Unplanned Visitor entry cancelled",
+    message:
+      "You did not respond in time. Unplanned visitor #73 has been checked out by security.",
+    data: {
+      screen: "Visitors",
+      params: JSON.stringify({
+        screenTab: "Completed",
+        visitor_id: "73",
+        building_id: "1",
+      }),
+    },
+    categoryId: "UnplannedVisitor",
   },
-  categoryId: "UnplannedVisitor",
-}
-
 };
 
 function VisitorNotifications(key) {
